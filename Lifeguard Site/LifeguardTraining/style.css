@@ -1,0 +1,498 @@
+/* Main Body */
+body {
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
+
+    cursor: default;   
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+
+/* Nav Items */
+header {
+    background-color: #ee6b6e;
+    width: 100%;
+    border-bottom: 2px solid #c95a5c;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: auto;
+    width: 80%;
+}
+
+nav h1 {
+    font-size: 2em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+nav ul li {
+    font-size: 1.4em;
+    padding: 1em;
+    transition: all .5s ease-out,
+                text-shadow .5s .1s ease-out,
+                margin 0s;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li:hover {
+    background-color: #eb7e80;
+    /* border-right: 1px solid #6BEEEB; */
+    border-left: none;
+    border-bottom: 2px solid #6BEEEB;
+    margin: -2px;
+    color: #6BEEEB;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* Main Content */
+main {
+    margin: 0 1em;
+    /* background-color: ; */
+    min-height: 100%;
+
+}
+
+
+main .about-head h1 {
+    padding: 0;
+    margin: 0;
+
+}
+
+main .about-head {
+    display: block;
+    max-width: fit-content;
+    margin: 3em auto;
+    border-bottom: 1px solid black;
+}
+
+.grid-container{
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 4%;
+
+}
+
+.grid-container .box h2 {
+    display: block;
+    text-align: center;
+}
+
+.grid-container .note-box {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    margin: auto;
+}
+
+.circle {
+    display: block;
+    margin: auto;
+    max-width: 5rem;
+    max-height: 5rem;
+    border-radius: 50%;
+}
+
+/* Footer */
+
+footer {
+    margin-top: auto;
+    padding: 2em 0;
+    background-color: #ee6b6d4b;
+}
+
+footer h6 {
+    display: block;
+    margin: auto;
+    max-width: fit-content;
+    
+}
+
+/* Training Main Page */
+
+.training-grid-container {
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 4%;
+    grid-template-areas: 
+                ". header ."
+                "supplies img info"
+                "supplies img info";
+}
+
+
+#game-header {
+    grid-area: header;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#supplies {
+    grid-area: supplies;
+    background-color: #ee6b6d4b;
+    border: 1px solid black;
+    margin: auto;
+
+}
+
+ #supplies,
+ #score-container { 
+    padding: 1em;
+    border-radius: 1em;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+
+
+#supplies h3 /*,
+#actions h3 */{
+    text-align: center;
+    margin-top: .1em;
+    margin-bottom: .4em;
+
+}
+
+#supplies span,
+.supplies-attributes span {
+    padding: .3em;
+    margin: .3em 0;
+    border-radius: 1em;
+    min-width: 4em;
+    border:  1px solid #6BEEEB;
+    background-color: #6beeec56;
+    text-align: center;
+    transition: all .5s;
+}
+
+#supplies span:hover,
+.supplies-attributes span:hover {
+    border: 1px solid black;
+    background-color:#6BEEEB;
+}
+
+/* #actions {
+    grid-area: actions;
+} */
+
+#game-img {
+    grid-area: img;
+
+}
+
+#score-container {
+    grid-area: info;
+}
+
+
+
+/* Special Cursor */
+
+#sealcursor {
+    background-image: url('img/Seal-Easy-Cursor.svg');
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    z-index: 2;
+    border-radius: 50%;
+
+    display: none;
+}
+
+
+/* Actions styles */
+
+/* #supplies-whistle,
+#supplies-gloves,
+#supplies-sealeasy{
+    display: none;  
+} */
+
+.supplies-attributes { 
+    margin-left: auto;
+    padding-left: 5%;
+    display:flex;
+    flex-direction: column;
+    width: 90%;
+    border-left: 1px solid rgb(129, 124, 124);
+    display: none;
+}
+
+
+
+
+/* Warning */
+
+ #game-warning {
+    margin: auto;
+    padding: 1px 3px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 80, 61);
+} 
+
+
+
+/* Aside Content (aka start menu) */
+
+.game-setup {
+
+    max-width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.game-setup h3 {
+
+    display:block;
+    font-size: 2.3em;
+    color: black;
+    background-color: #6beeec79;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 0 1em;
+    margin: .7em auto;
+    max-width: 10em;
+    text-align: center;
+
+}
+
+.game-setup .button-training-container {
+    width: fit-content;
+    margin: auto;
+}
+
+.game-setup .button-training-container div {
+    background-color: #ee6b6d4b;
+    border: 1px solid black;
+    margin: .5em auto;
+    min-width: 17em;
+    border-radius: 10px;
+    padding:  .2em .5em;
+    text-align: center;
+    font-size: 1.3em;
+    transition: all .5s;
+
+}
+
+.game-setup .button-training-container div:hover {
+    background-color:#eb7e80ad;
+
+}
+
+.game-setup .button-training-container .selected-div {
+    /* border: 2px solid #6beeeccf; */
+    background-color: #eb7e80;
+}
+
+.game-setup  .button-training-container .selected-div:hover {
+    background-color: #eb7e80;
+}
+
+.game-setup .button-training-container div span {
+    display: block; 
+    width: 100%;
+    text-align: center;
+    font-size: .8em;
+}
+
+.game-setup button {
+
+    background-color: #6beeec56;
+    border-color: none;
+    border-radius: 25px;
+    margin: 1em auto;
+    font-size: 1em;
+    width: 25%;
+    transition: all .5s;
+
+}
+
+.game-setup button:hover {
+    background-color: #6BEEEB;
+
+}
+
+
+
+/* Score and Info divs */
+
+#score-container {
+    margin: auto;
+}
+
+
+#score-container > * {
+    margin: .2em auto;
+    padding: .2em .5em;
+    text-align: center;
+}
+
+#score-val-container {
+    font-size: 1.4em;
+    font-weight:bold;
+}
+
+#hint-val-container{
+    background-color: #ee6b6d4b;
+    border-radius:  10px;
+}
+
+#cpr-quality-val,
+#ar-quality-val {
+    background-color: rgba(0, 254, 0, 0.682);
+    border-radius: 12px;
+    padding: .2em .3em;
+
+}
+
+
+#reset-button{
+    margin-top: .5em;
+    padding: .2em, .5em;
+
+    box-shadow: none;
+
+    background-color: rgba(255, 0, 0, 0.322);
+    border: none;
+    border-bottom: 2px solid red;
+    border-right: 2px solid red;
+    border-radius: 12px;
+}
+
+#reset-button:hover {
+    border:none;
+
+}
+
+
+
+/* Media Queries */
+
+@media(max-width: 1030px){
+    .training-grid-container{
+        width: 90%;
+        grid-template-columns: 1fr 1.2fr;
+        grid-column-gap: 4%;
+        grid-template-areas:
+                    "info info"
+                    "header header"
+                    "supplies img";
+    }
+    nav {
+        width: 90%;
+    }
+    #game-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .grid-container{
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media(max-width: 720px){
+    .banner{
+        font-size: 1.7em;
+    }
+    .nav-item{
+        font-size: 1.2em;
+    }
+    #game-instructions{
+        font-size: .9em;
+    }
+    #score-container {
+        font-size: .8em;
+    }
+}
+
+@media(max-width: 684px){
+    .training-grid-container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                    "info"
+                    "header"
+                    "img"
+                    "supplies";
+    }
+
+    #score-container{
+        margin-bottom: 0;
+        padding-bottom: 0;
+        width: 90%;
+    }
+    #supplies{
+        margin-bottom: 10px;
+        width: 90%;
+    }
+    #game-img {
+        max-width: 70%;
+        height: auto;
+        margin: .5em auto;
+    }
+}
+
+@media(max-width: 610px){
+    #game-header{
+        font-size: 1.4em;
+    }
+    
+    .banner{
+        font-size: 1.4em;
+    }
+    .nav-item{
+        font-size: 1em;
+    }
+
+    
+    .about-head {
+        font-size: .8em;
+    }
+
+    .game-setup {
+        font-size: .8em;
+    }
+}
+
+@media(max-width: 520px){
+    .banner{
+        font-size: 1.2em;
+    }
+}
