@@ -248,17 +248,29 @@ h4 {
     background-color: var(--accent-2);
 }
 
+/* PROJECT IMAGES */
 .proj-img {
     aspect-ratio: 16/9;
-    background-size: contain;
+    background-size: cover;
+    background-position: center 0;
+    border-radius: 20px;
+    background-repeat: no-repeat;
 }
 
 #proj-1 {
     background-image: url(../img/Lifeguard-Site-Project-img.png);
 }
 
+#proj-2 {
+    background-image: url(../img/Movie-Storage-Project.png);
+}
+
 .proj-technologies {
     margin-bottom: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 0.25rem;
 }
 
 .proj-technologies span {
