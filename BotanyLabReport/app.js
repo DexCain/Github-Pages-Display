@@ -391,5 +391,4 @@ async function typeSentence(sentence, eleRef, delay = 1) { // 60ms
     contentArea.appendChild(button);
   }
 
-presentation4();    
-//loadUpStartPage();
+loadUpStartPage();
